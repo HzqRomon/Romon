@@ -12,14 +12,14 @@
  * };
  */
 bool hasCycle(struct ListNode *head) {
-    if (head == NULL) return false;
-    struct ListNode *slow = head, *fast = head;
-    while (fast) {
-        slow = slow->next;
-        fast = fast->next;
-        if (fast == NULL) return false;
-        fast = fast->next;
-        if (slow == fast) return true;
-    }
-    return false;
+	if (head == NULL) return false;
+	struct ListNode *slow = head, *fast = head;
+ 	while (fast) {
+		slow = slow->next;
+		fast = fast->next;
+		if (fast == NULL) return false;
+		fast = fast->next;
+		if (slow == fast) return true;
+	}
+	return false;
 }
